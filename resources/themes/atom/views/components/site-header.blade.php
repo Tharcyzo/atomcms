@@ -23,7 +23,7 @@
             <flex class="flex gap-x-4">
                 <a data-turbolinks="false" href="{{ route('nitro-client') }}">
                     <button
-                        class="relative hidden rounded-full bg-white/90 px-6 py-2 text-lg font-semibold text-black transition duration-300 ease-in-out hover:bg-white dark:bg-gray-900 dark:text-white md:block">
+                        class="relative hidden rounded-full bg-white px-6 py-2 text-lg font-semibold text-black hover:bg-gray-900 transition duration-300 ease-in-out hover:bg-white dark:bg-gray-900 dark:text-white md:block">
                         {{ __('Nitro client') }}
                     </button>
                 </a>
@@ -31,7 +31,7 @@
                 @if (config('habbo.client.flash_enabled'))
                     <a data-turbolinks="false" href="{{ route('flash-client') }}">
                         <button
-                            class="relative hidden rounded-full bg-white/90 px-6 py-2 text-lg font-semibold text-black transition duration-300 ease-in-out hover:bg-white dark:bg-gray-900 dark:text-white md:block">
+                            class="relative hidden rounded-full bg-white px-6 py-2 text-lg font-semibold text-black transition duration-300 ease-in-out hover:bg-white dark:bg-gray-900 dark:text-white md:block">
                             {{ __('Flash client') }}
                         </button>
                     </a>
@@ -44,9 +44,10 @@
         <x-modals.modal-wrapper>
             <div class="flex justify-center">
                 <div class="text-white font-semibold flex-col md:w-[600px]">
-                    <p class="hidden text-center text-xl md:block">
-                        {{ __('An online virtual world where you can create your own avatar, make friends, chat, create rooms and much more!') }}
-                    </p>
+				<center>
+                    <img class="drop-shadow transition duration-300 ease-in-out hover:scale-105"
+                        src="{{ setting('cms_logo') }}" alt="Hotel logo">
+						</center>
 
                     <div class="flex flex-col items-center justify-center gap-x-6 gap-y-4 md:mt-6 md:flex-row md:gap-y-0">
                         <button type="button" x-on:click="open = true"
