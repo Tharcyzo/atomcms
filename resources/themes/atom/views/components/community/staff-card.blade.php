@@ -9,7 +9,7 @@
         style="background: rgba(0, 0, 0, 0.5) url({{ asset(sprintf('assets/images/%s', $user->permission?->staff_background ?? 'staff-bg.png')) }});">
     </div>
 
-    <div class="absolute top-4 left-1 drop-shadow">
+    <div class="absolute top-0 left-1 drop-shadow">
         <a href="{{ route('profile.show', $user->username) }}">
             <img style="image-rendering: pixelated;" class="transition duration-300 ease-in-out hover:scale-105"
                 src="{{ setting('avatar_imager') }}{{ $user->look }}&direction=2&head_direction=3&gesture=sml&action=wav"
@@ -17,17 +17,19 @@
         </a>
     </div>
 
-    <p class="text-2xl font-semibold ml-[70px] text-white -mt-[35px]">
+	<p class="text-2xl font-semibold ml-[70px] text-white -mt-[35px]" style="padding-left: 70px; margin-top: -39px;">
         {{ $user->username }}
     </p>
 
-    <div class="flex w-full items-center justify-between px-4">
+    <div class="flex w-full items-center justify-between px-4" style="padding-left: 70px; margin-top: 13px;">
         <p class="ml-[57px] text-sm mt-[10px] font-semibold text-gray-500 truncate">
             {{ Str::limit($user->motto, 20) }}
         </p>
 
-        <div
+    <div style="margin-top: -10px; margin-right: -7px;">
+        <div 
             class="min-w-[15px] max-w-[15px] min-h-[15px] max-h-[15px] rounded-full mt-2 flex items-start {{ $user->online ? 'bg-green-600' : 'bg-red-600' }}">
         </div>
+		</div>
     </div>
 </div>
