@@ -84,6 +84,10 @@
 
         <x-slot:children>
 			@auth
+            <x-navigation.dropdown-child :route="route('help-center.rules.index')">
+                    {{ __('Rules') }}
+            </x-navigation.dropdown-child>
+            
             <x-navigation.dropdown-child :route="route('help-center.index')">
                 {{ __('Help center') }}
             </x-navigation.dropdown-child>
