@@ -103,7 +103,7 @@
                         <template x-if="bagTab === 'inventory'">
                             <div class="flex w-full min-h-0">
                                 <div class="w-44 shrink-0 border-r dark:border-gray-700 p-2 flex flex-col gap-0.5">
-                                    <template x-for="t in ['stickers','notes','widgets','backgrounds']" :key="t">
+                                    <template x-for="t in ['{{ __('Stickers') }}','{{ __('Notes') }}','{{ __('Widgets') }}','{{ __('Backgrounds') }}']" :key="t">
                                         <button class="text-left px-3 py-1.5 rounded text-sm capitalize transition" :class="invTab === t ? 'bg-blue-500 text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-700'" @click="invTab = t; invActive = null; invSelected = []; placeQty = 1" x-text="t"></button>
                                     </template>
                                 </div>
